@@ -50,6 +50,8 @@ int main() {
 		light[2] = -2+_;
 		
 		draw(&func, range, width, light, t);
+
+                // to clear the screen for next frame
 		for (i=0; i<=width; i++) {
 			printf("\033[A");
 			fflush(stdout);
