@@ -7,3 +7,5 @@ Frame by frame, it displays the surface illuminated by a light source for that i
 This printing task is done by ```draw()```. It prints the surface character by character where the choice of character
 depends upon the brightness at that point on the surface. But ```draw()``` itself doesn't evaluate the brightness at
 each point it is ```prjx()``` that does the job.
+
+![](images/Ripples.gif)
