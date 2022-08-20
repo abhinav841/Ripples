@@ -38,9 +38,9 @@ int main() {
     const clock_t t0 = clock();
 
     while (1) {
-		
+
         t = ((float)(clock()-t0))/CLOCKS_PER_SEC;
-		
+
         // defines how the direction of
         // light changes with time
         _ = sin(t/3)+1;
@@ -55,7 +55,7 @@ int main() {
             printf("\033[A");
             fflush(stdout);
             }
-	
+
         }
 
         return 0;
@@ -64,7 +64,7 @@ int main() {
 
 
 float prjx(float (*f)(float, float, float), float d, float x, float y, float lit[3], float t) {
-	
+
     // finds the intensity of reflection
     // or brightness at (x, y) by taking the
     // projection of (negative of) the light
@@ -80,11 +80,11 @@ float prjx(float (*f)(float, float, float), float d, float x, float y, float lit
     float mg1 = sqrt(nrm[0]*nrm[0] +
                      nrm[1]*nrm[1] +
                      nrm[2]*nrm[2]);
-	 
+
     float mg2 = sqrt(lit[0]*lit[0] +
                      lit[1]*lit[1] +
                      lit[2]*lit[2]);
-			
+
     return (-lit[0]*nrm[0] +
             -lit[1]*nrm[1] +
             -lit[2]*nrm[2])/
