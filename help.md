@@ -9,3 +9,12 @@ Hence, func() defines the surface that is mostly spread across the horizon. Ther
 As a sidenote, I have found only periodic functions enjoyable - trigonometric and functions involving modulo.
 
 ## main()
+**range and width**
+
+range and size of the plot are initialised here.
+
+```range``` is basically the area of the plot. For example, if ```range``` is set to ```6.5``` then plot will be of (0, 6.5) × (0, 6.5), i.e., a square of side length 6.5 units with its bottom left corner at the origin.
+
+```width``` is for size of the plot, i.e., the number of characters in it. For example, if ```width``` is set to ```30``` (obviously an integer) then the plot will have (at most) 30 × 30 = 900 characters.
+
+One may ask - *How can I get the plot for negative quadrants, for example, I want the origin at the center of the plot.*
