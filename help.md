@@ -17,4 +17,6 @@ range and size of the plot are initialised here.
 
 ```width``` is for size of the plot, i.e., the number of characters in it. For example, if ```width``` is set to ```30``` (obviously an integer) then the plot will have (at most) 30 × 30 = 900 characters.
 
-One may ask - *How can I get the plot for negative quadrants, for example, I want the origin at the center of the plot.*
+![](images/range_width.png)
+
+One may ask - *How can I get the plot for negative quadrants, for example, If I want the origin at the center of the plot?*
