@@ -77,6 +77,12 @@ float prjx(float (*f)(float, float, float), float d, float x, float y, float lit
     // surface normal vector
     float nrm[3] = {-dsq*dzx, -dsq*dzy, +dsq};
 
+    float dot =  lit[0]*nrm[0] +
+                 lit[1]*nrm[1] +
+                 lit[2]*nrm[2];
+
+    if (dot > 0) return 0;
+
     float _a_ = (nrm[0]*nrm[0] +
                  nrm[1]*nrm[1] +
                  nrm[2]*nrm[2]);
@@ -86,10 +92,7 @@ float prjx(float (*f)(float, float, float), float d, float x, float y, float lit
                  lit[2]*lit[2]);
 
     return (_a_*_a_*lit[2] -
-            2*nrm[2]*(lit[0]*nrm[0] +
-                      lit[1]*nrm[1] +
-                      lit[2]*nrm[2]))/
-           (sqrt(_l_)*_a_);
+            2*nrm[2]*dot)/(sqrt(_l_)*_a_);
 
 }
 
