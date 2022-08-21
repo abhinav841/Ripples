@@ -65,30 +65,31 @@ int main() {
 
 float prjx(float (*f)(float, float, float), float d, float x, float y, float lit[3], float t) {
 
-    // finds the intensity of reflection
-    // or brightness at (x, y) by taking the
-    // projection of (negative of) the light
-    // vector on surface normal at (x, y)
+    // finds the intensity of reflection or
+    // brightness at (x, y), which is given
+    // by the z component of the light reflected
+    // by the small surface area at (x, y).
 
     float dzx = ((*f)(x+d,y,t)-(*f)(x,y,t))/d;
     float dzy = ((*f)(x,y+d,t)-(*f)(x,y,t))/d;
-    const float dzz = 1;
+    float dsq = d*d;
 
     // surface normal vector
-    float nrm[3] = {-dzx, -dzy, +dzz};
+    float nrm[3] = {-dsq*dzx, -dsq*dzy, +dsq};
 
-    float mg1 = sqrt(nrm[0]*nrm[0] +
-                     nrm[1]*nrm[1] +
-                     nrm[2]*nrm[2]);
+    float _a_ = (nrm[0]*nrm[0] +
+                 nrm[1]*nrm[1] +
+                 nrm[2]*nrm[2]);
 
-    float mg2 = sqrt(lit[0]*lit[0] +
-                     lit[1]*lit[1] +
-                     lit[2]*lit[2]);
+    float _l_ = (lit[0]*lit[0] +
+                 lit[1]*lit[1] +
+                 lit[2]*lit[2]);
 
-    return (-lit[0]*nrm[0] +
-            -lit[1]*nrm[1] +
-            -lit[2]*nrm[2])/
-               (mg1*mg2);
+    return (_a_*_a_*lit[2] -
+            2*nrm[2]*(lit[0]*nrm[0] +
+                      lit[1]*nrm[1] +
+                      lit[2]*nrm[2]))/
+           (sqrt(_l_)*_a_);
 
 }
 
