@@ -10,7 +10,7 @@ float spiral(float x, float y, float t) {
     float a, r, d;
     a = atan2(y, x)-5*t;
     r = sqrt(x*x + y*y);   // remove sqrt for uniform spiral
-    d = 2*sin(r - a + t);. // (-t) to reverse the rotation
+    d = 2*sin(r - a + t);  // (-t) to reverse the rotation
 
     return d;
 
