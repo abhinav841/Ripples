@@ -19,4 +19,9 @@ range and size of the plot are initialised here.
 
 ![](images/range_width.png)
 
-One may ask - *How can I get the plot for negative quadrants, for example, If I want the origin at the center of the plot?*
+One may ask -
+> How can I get the plot for negative quadrants, for example, If I want the origin at the center of the plot?
+
+For this, we can translate the surface by adding or subtracting appropriate value from x and y coordinates.
+For example, let the surface function be sin(x + y² - t) and the range be 6. To shift the surface's origin to the centre of the plot,
+I must subtract 3 from both x and y coordinates (why?). Hence, the desired function is sin((x-3) + (y-3)*(y-3) - t).
