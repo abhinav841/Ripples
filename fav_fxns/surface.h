@@ -25,8 +25,8 @@ float wavy_ripple(float x, float y, float t) {
     a = atan2(y, x);
     r = 0.3/(sqrt(x*x + y*y)+1);
     k = 15;
-    dx = r*sin(k*a-3*t)*sin(a)+r;
-    dy = r*sin(k*a-3*t)*cos(a)+r;
+    dx = r*sin(k*a-3*t)*sin(k*a)+r;
+    dy = r*sin(k*a-3*t)*cos(k*a)+r;
     x -= dx;
     y -= dy;
     d = sin(x*x + y*y - 5*t);
