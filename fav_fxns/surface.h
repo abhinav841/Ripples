@@ -42,3 +42,17 @@ float wavy_ripple(float x, float y, float t) {
     return d;
 
 }
+
+
+float propeller(float x, float y, float t) {
+	
+	// range may be taken 05
+	x -= 3; y -= 3;
+	float a, r, d;
+	a = atan2(y, x);
+	r = sqrt(x*x + y*y);
+	d = 0.3*sin(r - 20*a - t*t) - 0.3*sin(r*r);
+	
+	return d;
+
+}
