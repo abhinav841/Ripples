@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <math.h>
 #include <time.h>
+#include "surface.h"
 
 
-float func(float x, float y, float t) {
+float ripple(float x, float y, float t) {
 
     // defines the surface function z
     // as a function of x, y and time
@@ -20,6 +21,7 @@ void draw(float (*f)(float, float, float), float, int, float [3], float);
 
 int main() {
 
+    float (*func)(float, float, float) = &ripple;
     float range; int width;
 
     ///////////// User Input /////////////
@@ -48,7 +50,7 @@ int main() {
         light[1] = _*cos(t);
         light[2] = -2+_;
 
-        draw(&func, range, width, light, t);
+        draw(func, range, width, light, t);
 
         // to clear the screen for next frame
         for (i=0; i<=width; i++) {
