@@ -2,7 +2,7 @@
 
 The program attempts to visualise a given function of the form **z = f(x, y, t)**.
 
-_plot for z = sin(x² + y² - t)_
+_plot of z = sin(x² + y² - t) which resembles water ripples_
 
 ![](images/Ripples.gif)
 
