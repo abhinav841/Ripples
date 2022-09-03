@@ -22,12 +22,12 @@ float wavy_ripple(float x, float y, float t) {
     float a, r, k, dx, dy, d;
     a = atan2(y, x);
     r = 0.3/(sqrt(x*x + y*y)+1);
-    k = 15;
+    k = 7;
     dx = r*sin(k*a-3*t)*sin(k*a)+r;
     dy = r*sin(k*a-3*t)*cos(k*a)+r;
     x -= dx;
     y -= dy;
-    d = sin(x*x + y*y - 5*t);
+    d = sin(x*x + y*y - 3*t);
 
     /* on applying the idea of spiral equation
      * i got another equation for wavy_ripple:
