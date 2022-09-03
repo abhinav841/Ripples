@@ -1,6 +1,4 @@
 // The following are my favourite functions.
-// I did not find them accidently, I had to
-// derive each one of them.
 
 
 float spiral(float x, float y, float t) {
