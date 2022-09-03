@@ -8,7 +8,7 @@ _plot for z = sin(x² + y² - t)_
 
 # Quick Start 
 
-This is a very basic project consisting of only one source file (and an additional header file for storing surface functios). Simply download these files (keep them in the same folder) and run the source namely Ripples.c using a C/C++ compiler.
+This is a very basic project consisting of only one source file (and an additional header file for storing surface functios). Simply download these files (keep them in same folder) and run the source namely Ripples.c using a C/C++ compiler.
 
 - [Source](https://raw.githubusercontent.com/abhinav841/Ripples/main/Ripples.c)
 - [Header](https://raw.githubusercontent.com/abhinav841/Ripples/main/fav_fxns/surface.h)
