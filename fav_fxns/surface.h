@@ -17,7 +17,7 @@ float spiral(float x, float y, float t) {
 
 float wavy_ripple(float x, float y, float t) {
 
-    // range may be taken 07
+    // range may be taken 05
     x -= 2.5; y -= 2.5;
     float a, r, k, dx, dy, d;
     a = atan2(y, x);
