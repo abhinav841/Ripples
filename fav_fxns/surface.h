@@ -1,4 +1,4 @@
-// The following are my favourite functions.
+// The following are my favourite functions
 
 
 float spiral(float x, float y, float t) {
