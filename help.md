@@ -1,4 +1,4 @@
-# About
+# Overview
 **The following sections explain the salient parts of the program.**
 ## ripple()
 The first thing that takes sight is ```ripple()``` - a function of x, y and t.
