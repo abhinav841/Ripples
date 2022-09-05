@@ -9,7 +9,7 @@ float ripple(float x, float y, float t) {
     // defines the surface function z
     // as a function of x, y and time
 
-    x -= 3; y -= 5;
+    x -= 2.3; y -= 2.5;
     float d = sin(x*x + y*y - 5*t);
     return d;
 
@@ -26,7 +26,7 @@ int main() {
 
     ///////////// User Input /////////////
 
-    range = 07;          // range for plot
+    range = 06;          // range for plot
     width = 60;          // size on screen
 
     //////////////////////////////////////
