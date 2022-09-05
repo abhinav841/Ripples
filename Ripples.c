@@ -106,26 +106,21 @@ void draw(float (*f)(float, float, float), float range, int width, float light[3
 
     // 1. storing values of f(x, y) at t
     int i, j;
-    float values[width][width], r;
-    float min = 0, max = 0;
+    float values[width][width];
     float c1 = range/width;
 
     for (i=0; i<width; i++)
         for (j=0; j<width; j++) {
-            if ((r=prjx(f,c1,i*c1,j*c1,light,t)) > max)
-                max = r;
-            else if (r < min)
-                min = r;
-            values[i][j] = r;
+            values[i][j] = prjx(f,c1,i*c1,j*c1,light,t);
         }
 
     // 2. plotting the points
     char shades[] = " .:-+=*%@#";
-    float c2 = (sizeof(shades)-2.)/(max-min);
+    float c2 = (sizeof(shades)-2)/2.;
 
     for (j=width-1; j+1; j--) {
         for (i=0; i<width; i++)
-            printf(" %c",shades[(int)round((values[i][j]-min)*c2)]);
+            printf(" %c",shades[(int)round(values[i][j]*c2)]);
         printf("\n");
     }
 
