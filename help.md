@@ -4,7 +4,7 @@
 The first thing that takes sight is ```ripple()``` - a function of x, y and t.
 
 For a given point (x, y) the function that is assigned to ```func``` in main, here ```ripple()```, gives the z-coordinate of the point i.e. the height of that point above/below the x-y plane.
-Thus, the function defines the surface that is mostly spread across the horizon. The variable t for time makes the surface dynamic w.r.t time.
+Thus, the function defines a surface that is generally spread across the horizon. The variable t for time makes the surface dynamic w.r.t time.
 
 As a sidenote, I have found only periodic functions enjoyable - trigonometric and functions involving modulo. You can find them in [surface.h](fav_fxns/surface.h) file
 
