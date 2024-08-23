@@ -54,3 +54,29 @@ float propeller(float x, float y, float t) {
 	return d;
 
 }
+
+
+float pendulum(float x, float y, float t) {
+	
+	// range may be taken 10
+	t *= 2;
+	x -= 5;
+	y -= 17;
+	
+	// rotating the whole plane
+	// about the origin back and forth
+	float r, a, X, Y, l = 15;
+	r = sqrt(x*x + y*y);
+	a = atan2(y, x);
+	X = r*cos(0.2*sin(t) + a);
+	Y = r*sin(0.2*sin(t) + a);
+	
+	// creating pendulum and string
+	a = X*X + pow(Y+l, 2);
+	if (a <= 2)
+		return sqrt(2 - a);
+	else if ((X*X <= 0.1) && (Y > -l))
+		return sqrt(0.1 - X*X);
+	return sqrt(-1);
+
+}
