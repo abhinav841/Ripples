@@ -6,9 +6,9 @@ float spiral(float x, float y, float t) {
     // range may be taken 07
     x -= 2.5; y -= 2.5;
     float a, r, d;
-    a = atan2(y, x)-5*t;
-    r = sqrt(x*x + y*y);   // remove sqrt for uniform spiral
-    d = 2*sin(r - a + t);  // (-t) to reverse the rotation
+    a = atan2(y, x);
+    r = (x*x + y*y);   // sqrt(r) for uniform spiral
+    d = 2*sin(r - a - t*t);  // t*t for accelerating rotation
 
     return d;
 
